@@ -1,13 +1,21 @@
 <template>
     <header>
-        <div class="img">
-            <img src="@/assets/images/dc-logo.png" alt="logo">
+        <div class="container">
+            <div class="img">
+                <img src="@/assets/images/dc-logo.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li v-for="(title, index) in menu" :key="index">
+                        <a :class="title.current == true ? 'active' : ''" :href="title.url">
+                            {{title.text}}
+                            <div v-if="title.current == true" class="line"></div>
+                        </a>
+                        
+                    </li>
+                </ul>
+            </nav>  
         </div>
-        <nav>
-            <ul>
-                <li v-for="(title, index) in menu" :key="index"><a :href="title.url">{{title.text}}</a></li>
-            </ul>
-        </nav>
     </header>
 </template>
 
@@ -75,24 +83,51 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/style/variables";
-header {
+.container {
     display: flex;
-    align-items: center;
+    height: 120px ;
     justify-content: space-between;
     .img {
         display: inline-block;
+        align-self: center;
+        width: 80px;
+        height: 80px;
+
+        img {
+            width: 100% ;
+        }
     }
     nav {
+
+        align-self: flex-end;
+
         ul {
             display: flex;
             list-style: none;
 
-            a {
-                text-decoration: none;
-                color: #464646;
-                font-weight: 700;
-                padding: 0 17px;
+            li {
+
+                a {
+                    text-decoration: none;
+                    text-align: center;
+                    color: #464646;
+                    font-weight: 700;
+                    margin: 0 17px;
+                    display: inline-block;
+                }
+
+                .active {
+                    color: $mainColor;
+                }
+
+                .line {
+                    height: 5px;
+                    margin-top: 47px;
+                    background-color: $mainColor;
+                }
             }
+
+            
         }
     }
 }
