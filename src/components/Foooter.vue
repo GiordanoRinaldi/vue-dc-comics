@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="bg-footer">
-            <img src="@/assets/images/dc-logo-bg.png" alt="">
+            <img src="../assets/images/dc-logo-bg.png" alt="">
             <div class="container">
                 <div class="footer-links">
                     <div class="first-column">
@@ -50,7 +50,7 @@ export default {
 <style lang="scss" scoped>
     footer {
         height: 380px;
-        background-image: url('~@/assets/images/footer-bg.jpg');
+        background-image: url('../assets/images/footer-bg.jpg');
         background-repeat: no-repeat;
         background-size: cover;
 

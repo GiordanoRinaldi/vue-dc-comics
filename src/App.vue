@@ -30,9 +30,9 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "@/assets/style/common";
+  @import "./assets/style/common";
   .hero{
     height: 400px;
-    background-image: url('~@/assets/images/jumbotron.jpg');
+    background-image: url('./assets/images/jumbotron.jpg');
   }
 </style>
