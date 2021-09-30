@@ -24,7 +24,7 @@ export default {
     Header,
     Top,
     Bottom,
-    Foooter
+    Foooter,
   }
 }
 </script>
