@@ -2,6 +2,7 @@
   <div id="app">
     <Header/>
     <main>
+       <div class="hero"></div>
       <Top/>
       <Bottom/>
     </main>
@@ -30,4 +31,8 @@ export default {
 
 <style lang="scss">
   @import "@/assets/style/common";
+  .hero{
+    height: 400px;
+    background-image: url('~@/assets/images/jumbotron.jpg');
+  }
 </style>
