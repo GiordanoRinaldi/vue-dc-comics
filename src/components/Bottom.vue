@@ -4,7 +4,7 @@
             <div v-for="(logo, index) in menu" :key="index" class="logoes">
                 <a :href="logo.url">
                     <div class="img">
-                        <img :src="require ('@/assets/images/'+ logo.img)" :alt="logo.text">
+                        <img :src="require('@/assets/images/'+ logo.img)" :alt="logo.text">
                     </div>
                     <div class="text">
                        {{logo.text}} 
