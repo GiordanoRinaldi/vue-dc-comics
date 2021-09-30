@@ -1,9 +1,12 @@
 <template>
     <section>
+        <div class="current-series">
+            <h2>CURRENT SERIES</h2>
+        </div>
         <div class="container">
             <Card v-for="(card, index) in listaFumetti" :key="index" :prod="card"/>
         </div>
-       
+        <button class="btn-more"> <strong>LOAD MORE</strong> </button>
     </section>
 </template>
 
@@ -100,7 +103,8 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/style/variables";
     section{
-        padding: 60px 0 60px 0;
+        position: relative;
+        padding: 60px 0 20px 0;
         background-color: #1c1c1c;
     }
     .container {
@@ -108,6 +112,28 @@ export default {
         flex-wrap: wrap;
         color: white;
         font-weight: 700;
+        padding-bottom: 60px;
          
+    }
+    .current-series{
+        width: 230px;
+        height: 50px;
+        background-color: $mainColor;
+        
+        position: absolute;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        top: -25px;
+        left: 210px;
+    }
+
+    .btn-more{
+        width: 200px;
+        height: 40px;
+        margin-left: calc(50% - 100px);
+        color: white;
+        background-color: $mainColor;
+        border: none;
     }
 </style>
