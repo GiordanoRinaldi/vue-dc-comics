@@ -29,6 +29,21 @@
                 </div>
             </div>
         </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div>
+                    <button class="btn-sign">SIGN-UP NOW!</button>
+                </div>
+                <div class="follow">
+                    <h3>FOLLOW US</h3>
+                    <div class="social" v-for="(img, index) in imgSocial" :key="index">
+                        <img :src="require('../assets/images/' + img)" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
     </footer>
 </template>
 
@@ -41,6 +56,7 @@ export default {
             shop: ["Shop DC", "Shop DC Collectibles",],
             dc: ["Therms Of Use", "Privacy policy (New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us",],
             sites: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa", ],
+            imgSocial: ["footer-facebook.png", "footer-twitter.png", "footer-youtube.png", "footer-pinterest.png", "footer-periscope.png",]
         }
     }
 
@@ -48,6 +64,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../assets/style/variables";
+
     footer {
         height: 380px;
         background-image: url('../assets/images/footer-bg.jpg');
@@ -90,5 +108,48 @@ export default {
             }
         }
         
+    }
+
+    .footer-bottom {
+        background-color: #303030;
+        height: 110px;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    
+
+    
+
+    .follow {
+        display: flex;
+
+        h3{
+            color: $mainColor;
+            line-height: 35px;
+        }
+
+        .social {
+            width: 35px;
+            height: 35px;
+            margin-left: 20px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .btn-sign{
+        width: 150px;
+        height: 50px;
+        background-color: #303030;
+        color: white;
+        border: 3px solid $mainColor ;
     }
 </style>

@@ -125,7 +125,7 @@ export default {
         text-align: center;
         line-height: 50px;
         top: -25px;
-        left: 210px;
+        left: 15%;
     }
 
     .btn-more{
