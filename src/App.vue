@@ -2,7 +2,7 @@
   <div id="app">
     <Header/>
     <main>
-       <div class="hero"></div>
+      <Hero :bgImage="require('./assets/images/jumbotron.jpg')"/>
       <Top/>
       <Bottom/>
     </main>
@@ -14,6 +14,7 @@
 // import HelloWorld from './components/HelloWorld.vue'
 
 import Header from './components/Header.vue'
+import Hero from './components/Hero.vue'
 import Top from './components/Top.vue'
 import Bottom from './components/Bottom.vue'
 import Foooter from './components/Foooter.vue'
@@ -25,14 +26,12 @@ export default {
     Top,
     Bottom,
     Foooter,
+    Hero,
   }
 }
 </script>
 
 <style lang="scss">
   @import "./assets/style/common";
-  .hero{
-    height: 400px;
-    background-image: url('./assets/images/jumbotron.jpg');
-  }
+
 </style>
